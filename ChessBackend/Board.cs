@@ -95,14 +95,27 @@ namespace ChessBackend
                 y_dir = y_dir / Math.Abs(y_dir);
 
             //check every cell in the direction
-            int x;
-            int y;
-            for (x = from.x_location + x_dir, y = from.y_location + y_dir;
-                x != to.x_location || y != to.y_location;
-                x += x_dir, y += y_dir)
+            int x = from.x_location + x_dir;
+            int y = from.y_location + y_dir;
+            //loop through the direction until you reach the target
+            //wasn't working the normal way, so now here is an if statement
+            if (y_dir == 0)
             {
-                if (getCell(x, y).unit != null)
-                    return true;
+                for (; x != to.x_location;
+                    x += x_dir, y += y_dir)
+                {
+                    if (getCell(x, y).unit != null)
+                        return true;
+                }
+            }
+            else
+            {
+                for (; y != to.y_location; 
+                    x += x_dir, y += y_dir)
+                {
+                    if (getCell(x, y).unit != null)
+                        return true;
+                }
             }
             return false;
         }
