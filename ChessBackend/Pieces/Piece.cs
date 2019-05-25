@@ -74,6 +74,7 @@ namespace ChessBackend
         public void move(Cell new_cell)
         {
             unit_position.unit = null;
+            unit_position = new_cell;
             new_cell.unit = this;
         }
     }
