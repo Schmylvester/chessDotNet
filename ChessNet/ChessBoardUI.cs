@@ -9,8 +9,8 @@ namespace ChessNet
 {
     public partial class ChessBoard : Form
     {
-        Board board;
-        Button[,] cells;
+        Board board = null;
+        Button[,] cells = null;
         Piece selected_piece = null;
         Team active_team = Team.White;
 
@@ -80,7 +80,7 @@ namespace ChessNet
         /// </summary>
         /// <param name="sender">Object sending the clicks</param>
         /// <param name="e">Click arguments</param>
-        private void identifyClick(object sender, System.EventArgs e)
+        private void handleClick(object sender, System.EventArgs e)
         {
             int x = 0;
             int y = 0;
@@ -90,47 +90,52 @@ namespace ChessNet
                 {
                     if (cells[x, y] == (sender))
                     {
-                        handleClick(board.getCell(x, y));
+                        if (selected_piece == null)
+                        {
+                            selectPiece(board.getCell(x, y));
+                        }
+                        else
+                        {
+                            movePiece(board.getCell(x, y));
+                        }
                         return;
                     }
                 }
             }
         }
 
-        void handleClick(Cell clicked_cell)
+        void selectPiece(Cell clicked_cell)
         {
-            if(selected_piece == null)
+            Piece in_cell = clicked_cell.unit;
+            if (in_cell != null)
             {
-                Piece in_cell = clicked_cell.unit;
-                if(in_cell != null)
+                if (in_cell.unit_team == active_team)
                 {
-                    if (in_cell.unit_team == active_team)
-                    {
-                        selected_piece = in_cell;
-                    }
-                    else
-                    {
-                        Feedback.Text = "It is " + active_team.ToString() + "'s turn";
-                    }
+                    selected_piece = in_cell;
+                }
+                else
+                {
+                    Feedback.Text = "It is " + active_team.ToString().ToLower() + "'s turn";
                 }
             }
             else
             {
-                string invalid_feedback = "";
-                if(selected_piece.validMove(clicked_cell, ref invalid_feedback))
-                {
-                    selected_piece.move(clicked_cell);
-                    updateBoard();
-                    Feedback.Text = "";
-                    //next player's turn
-                    active_team = active_team == Team.White ? Team.Black : Team.White;
-                }
-                else
-                {
-                    Feedback.Text = invalid_feedback;
-                }
-                selected_piece = null;
+                Feedback.Text = "Please select a unit";
             }
+        }
+
+        void movePiece(Cell clicked_cell)
+        {
+            string feedback = "";
+            if (selected_piece.validMove(clicked_cell, ref feedback))
+            {
+                selected_piece.move(clicked_cell, ref feedback);
+                updateBoard();
+                //next player's turn
+                active_team = 3 - active_team;
+            }
+            Feedback.Text = feedback;
+            selected_piece = null;
         }
     }
 }

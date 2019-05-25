@@ -74,12 +74,17 @@ namespace ChessBackend
             return SpaceOccupied.Empty;
         }
 
-        public void move(Cell new_cell)
+        public void move(Cell new_cell, ref string feedback)
         {
             unit_position.unit = null;
             unit_position = new_cell;
             new_cell.unit = this;
             has_moved = true;
+
+            if (board.checkCheck())
+            {
+                feedback = (3 - unit_team).ToString().ToLower() + " is in check";
+            }
         }
     }
 }

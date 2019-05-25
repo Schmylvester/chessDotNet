@@ -111,5 +111,10 @@ namespace ChessBackend
             }
             return false;
         }
+
+        public bool checkCheck()
+        {
+            return false;
+        }
     }
 }
