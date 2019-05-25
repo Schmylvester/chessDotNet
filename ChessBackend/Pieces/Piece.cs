@@ -81,9 +81,10 @@ namespace ChessBackend
             new_cell.unit = this;
             has_moved = true;
 
-            if (board.checkCheck())
+            Team check = board.checkCheck();
+            if (check != Team.None)
             {
-                feedback = (3 - unit_team).ToString().ToLower() + " is in check";
+                feedback = check + " is in check";
             }
         }
     }

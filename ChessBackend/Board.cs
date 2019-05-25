@@ -15,7 +15,7 @@ namespace ChessBackend
         int width = 8;
         int height = 8;
         Cell[] cells = null;
-        Piece[] allPieces = null;
+        Piece[] all_pieces = null;
         King white_king = null;
         King black_king = null;
 
@@ -31,40 +31,40 @@ namespace ChessBackend
 
         void createPieces()
         {
-            allPieces = new Piece[32];
-            allPieces[0] = new Rook();     //black rook left
-            allPieces[7] = new Rook();     //black rook right
-            allPieces[24] = new Rook();     //white rook left
-            allPieces[31] = new Rook();     //white rook right
-            allPieces[1] = new Knight();   //black knight left
-            allPieces[6] = new Knight();   //black knight right
-            allPieces[25] = new Knight();   //white knight left
-            allPieces[30] = new Knight();   //white knight right
-            allPieces[2] = new Bishop();   //black bishop left
-            allPieces[5] = new Bishop();   //black bishop right
-            allPieces[26] = new Bishop();   //white bishop left
-            allPieces[29] = new Bishop();   //white bishop right
-            allPieces[3] = new Queen();    //black queen
-            allPieces[28] = new Queen();    //white queen
-            allPieces[4] = new King();     //black king
-            allPieces[27] = new King();     //white king
+            all_pieces = new Piece[32];
+            all_pieces[0] = new Rook();     //black rook left
+            all_pieces[7] = new Rook();     //black rook right
+            all_pieces[24] = new Rook();     //white rook left
+            all_pieces[31] = new Rook();     //white rook right
+            all_pieces[1] = new Knight();   //black knight left
+            all_pieces[6] = new Knight();   //black knight right
+            all_pieces[25] = new Knight();   //white knight left
+            all_pieces[30] = new Knight();   //white knight right
+            all_pieces[2] = new Bishop();   //black bishop left
+            all_pieces[5] = new Bishop();   //black bishop right
+            all_pieces[26] = new Bishop();   //white bishop left
+            all_pieces[29] = new Bishop();   //white bishop right
+            all_pieces[3] = new Queen();    //black queen
+            all_pieces[28] = new Queen();    //white queen
+            all_pieces[4] = new King();     //black king
+            all_pieces[27] = new King();     //white king
             //all pawns
             for (int i = 8; i < 24; i++)
             {
-                allPieces[i] = new Pawn();
+                all_pieces[i] = new Pawn();
             }
             //init all values
             for (int i = 0; i < 16; i++)
             {
-                allPieces[i].init(Team.Black, getCell(i % 8, i / 8), this);
+                all_pieces[i].init(Team.Black, getCell(i % 8, i / 8), this);
             }
             for (int i = 16; i < 32; i++)
             {
-                allPieces[i].init(Team.White, getCell(i % 8, 4 + (i / 8)), this);
+                all_pieces[i].init(Team.White, getCell(i % 8, 4 + (i / 8)), this);
             }
             //store kings to help identify when in check
-            white_king = (King)allPieces[27];
-            black_king = (King)allPieces[4];
+            white_king = (King)all_pieces[27];
+            black_king = (King)all_pieces[4];
         }
 
         public Cell getCell(int x, int y)
@@ -98,23 +98,44 @@ namespace ChessBackend
             int x;
             int y;
             for (x = from.x_location + x_dir, y = from.y_location + y_dir;
-                x != to.x_location && y != to.y_location;
+                x != to.x_location || y != to.y_location;
                 x += x_dir, y += y_dir)
             {
-                if(Math.Abs(x) >= 8 || Math.Abs(y) >= 8)
-                {
-                    Debug.printError("Problem with the path check loop");
-                    return false;
-                }
                 if (getCell(x, y).unit != null)
                     return true;
             }
             return false;
         }
 
-        public bool checkCheck()
+        public Team checkCheck()
         {
-            return false;
+            Team return_value = Team.None;
+            foreach(Piece piece in all_pieces)
+            {
+                if(piece.unit_team == Team.White)
+                {
+                    string n = "";
+                    if(piece.validMove(black_king.unit_position, ref n))
+                    {
+                        if (return_value == Team.None)
+                            return_value = Team.Black;
+                        else if (return_value == Team.White)
+                            return_value = Team.Both;
+                    }
+                }
+                if(piece.unit_team == Team.Black)
+                {
+                    string n = "";
+                    if(piece.validMove(white_king.unit_position, ref n))
+                    {
+                        if (return_value == Team.None)
+                            return_value = Team.White;
+                        else if (return_value == Team.Black)
+                            return_value = Team.Both;
+                    }
+                }
+            }
+            return return_value;
         }
     }
 }

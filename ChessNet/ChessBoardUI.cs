@@ -1,7 +1,6 @@
 ﻿using System.Windows.Forms;
 using ChessBackend;
 
-//TODO: Tell the players what's happening
 //TODO: Highlight selected unit
 //TODO: Highlight valid moves
 
