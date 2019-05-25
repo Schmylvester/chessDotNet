@@ -27,29 +27,27 @@ namespace ChessBackend
         void createPieces()
         {
             allPieces = new Piece[32];
-            //white team
-            allPieces[0] = new Rook();
-            allPieces[1] = new Knight();
-            allPieces[2] = new Bishop();
-            allPieces[3] = new Queen();
-            allPieces[4] = new King();
-            allPieces[5] = new Bishop();
-            allPieces[6] = new Knight();
-            allPieces[7] = new Rook();
+            allPieces[0]  = new Rook();     //black rook left
+            allPieces[7]  = new Rook();     //black rook right
+            allPieces[24] = new Rook();     //white rook left
+            allPieces[31] = new Rook();     //white rook right
+            allPieces[1]  = new Knight();   //black knight left
+            allPieces[6]  = new Knight();   //black knight right
+            allPieces[25] = new Knight();   //white knight left
+            allPieces[30] = new Knight();   //white knight right
+            allPieces[2]  = new Bishop();   //black bishop left
+            allPieces[5]  = new Bishop();   //black bishop right
+            allPieces[26] = new Bishop();   //white bishop left
+            allPieces[29] = new Bishop();   //white bishop right
+            allPieces[3]  = new Queen();    //black queen
+            allPieces[28] = new Queen();    //white queen
+            allPieces[4]  = new King();     //black king
+            allPieces[27] = new King();     //white king
             //all pawns
             for (int i = 8; i < 24; i++)
             {
                 allPieces[i] = new Pawn();
             }
-            //black team
-            allPieces[24] = new Rook();
-            allPieces[25] = new Knight();
-            allPieces[26] = new Bishop();
-            allPieces[27] = new King();
-            allPieces[28] = new Queen();
-            allPieces[29] = new Bishop();
-            allPieces[30] = new Knight();
-            allPieces[31] = new Rook();
             //init all values
             for (int i = 0; i < 16; i++)
             {
@@ -59,6 +57,7 @@ namespace ChessBackend
             {
                 allPieces[i].init(Team.White, getCell(i % 8, 4 + (i / 8)), this);
             }
+            //store kings to help identify when in check
             white_king = (King)allPieces[27];
             black_king = (King)allPieces[4];
         }
@@ -92,7 +91,7 @@ namespace ChessBackend
             int x;
             int y;
             for (x = from.x_location + x_dir, y = from.y_location + y_dir;
-                x < to.x_location && y < to.y_location;
+                x != to.x_location && y != to.y_location;
                 x += x_dir, y += y_dir)
             {
                 if (getCell(x, y).unit != null)
