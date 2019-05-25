@@ -92,6 +92,7 @@
             this.x0y5 = new System.Windows.Forms.Button();
             this.x1y4 = new System.Windows.Forms.Button();
             this.x0y4 = new System.Windows.Forms.Button();
+            this.Feedback = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // x0y0
@@ -734,11 +735,25 @@
             this.x0y4.UseVisualStyleBackColor = true;
             this.x0y4.Click += new System.EventHandler(this.identifyClick);
             // 
+            // Feedback
+            // 
+            this.Feedback.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Feedback.AutoSize = true;
+            this.Feedback.Location = new System.Drawing.Point(72, 395);
+            this.Feedback.Name = "Feedback";
+            this.Feedback.Size = new System.Drawing.Size(144, 13);
+            this.Feedback.TabIndex = 64;
+            this.Feedback.Text = "I am the player feedback box";
+            this.Feedback.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ChessBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 450);
+            this.Controls.Add(this.Feedback);
             this.Controls.Add(this.x7y7);
             this.Controls.Add(this.x6y7);
             this.Controls.Add(this.x7y6);
@@ -806,6 +821,7 @@
             this.Name = "ChessBoard";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -875,6 +891,7 @@
         private System.Windows.Forms.Button x0y5;
         private System.Windows.Forms.Button x1y4;
         private System.Windows.Forms.Button x0y4;
+        private System.Windows.Forms.Label Feedback;
     }
 }
 

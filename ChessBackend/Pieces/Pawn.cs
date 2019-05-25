@@ -11,7 +11,7 @@ namespace ChessBackend.Pieces
             return "Pawn";
         }
 
-        public override bool validMove(Cell new_cell)
+        public override bool validMove(Cell new_cell, ref string feedback)
         {
             //check which direction the pawn faces
             int direction = 0;
@@ -24,10 +24,10 @@ namespace ChessBackend.Pieces
             {
                 //one space forward
                 if (unit_position.x_location == new_cell.x_location && in_space == SpaceOccupied.Empty)
-                    return base.validMove(new_cell);
+                    return base.validMove(new_cell, ref feedback);
                 //diagonal take
                 if (Math.Abs(unit_position.x_location - new_cell.x_location) == 1 && in_space == SpaceOccupied.Enemy)
-                    return base.validMove(new_cell);
+                    return base.validMove(new_cell, ref feedback);
             }
             // you can move two
             if (!has_moved)
@@ -36,11 +36,15 @@ namespace ChessBackend.Pieces
                 {
                     //check path blocked
                     if (board.checkPathBlocked(unit_position, new_cell))
+                    {
+                        feedback = "This would be valid if you were not trying to jump over another piece";
                         return false;
+                    }
                     if (unit_position.x_location == new_cell.x_location && in_space == SpaceOccupied.Empty)
-                        return base.validMove(new_cell);
+                        return base.validMove(new_cell, ref feedback);
                 }
             }
+            feedback = "Pawns have a bunch of movement rules, that move would break them";
             return false;
         }
     }

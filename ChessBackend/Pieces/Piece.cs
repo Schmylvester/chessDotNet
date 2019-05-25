@@ -44,11 +44,14 @@ namespace ChessBackend
             cell.unit = this;
         }
 
-        public virtual bool validMove(Cell new_cell)
+        public virtual bool validMove(Cell new_cell, ref string feedback)
         {
             //check teammate in cell
             if (checkSpaceBlocked(new_cell) == SpaceOccupied.Ally)
+            {
+                feedback = "That space is occupied";
                 return false;
+            }
             //TODO: check whether move would put self in check
             return true;
         }
@@ -76,6 +79,7 @@ namespace ChessBackend
             unit_position.unit = null;
             unit_position = new_cell;
             new_cell.unit = this;
+            has_moved = true;
         }
     }
 }

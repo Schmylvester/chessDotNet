@@ -1,6 +1,10 @@
 ﻿using System.Windows.Forms;
 using ChessBackend;
 
+//TODO: Tell the players what's happening
+//TODO: Highlight selected unit
+//TODO: Highlight valid moves
+
 namespace ChessNet
 {
     public partial class ChessBoard : Form
@@ -8,6 +12,7 @@ namespace ChessNet
         Board board;
         Button[,] cells;
         Piece selected_piece = null;
+        Team active_team = Team.White;
 
         public ChessBoard()
         {
@@ -99,16 +104,30 @@ namespace ChessNet
                 Piece in_cell = clicked_cell.unit;
                 if(in_cell != null)
                 {
-                    selected_piece = in_cell;
-                    return;
+                    if (in_cell.unit_team == active_team)
+                    {
+                        selected_piece = in_cell;
+                    }
+                    else
+                    {
+                        Feedback.Text = "It is " + active_team.ToString() + "'s turn";
+                    }
                 }
             }
             else
             {
-                if(selected_piece.validMove(clicked_cell))
+                string invalid_feedback = "";
+                if(selected_piece.validMove(clicked_cell, ref invalid_feedback))
                 {
                     selected_piece.move(clicked_cell);
                     updateBoard();
+                    Feedback.Text = "";
+                    //next player's turn
+                    active_team = active_team == Team.White ? Team.Black : Team.White;
+                }
+                else
+                {
+                    Feedback.Text = invalid_feedback;
                 }
                 selected_piece = null;
             }
