@@ -177,12 +177,10 @@ namespace ChessBackend
                         string s = "";
                         if (piece.validMove(cell, ref s))
                         {
-                            Board deepcopyBoard = clone();
-                            deepcopyBoard.all_pieces[i].move(cell, ref s);
-                            if (deepcopyBoard.inCheck(team) == null)
-                            {
+                            //make a copy of this board
+                            //move the piece to the place
+                            //are you out of check?
                                 return true;
-                            }
                         }
                     }
                 }
