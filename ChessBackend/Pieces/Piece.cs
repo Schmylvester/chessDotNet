@@ -12,7 +12,7 @@ namespace ChessBackend
 
         Both,
     }
-
+    
     public abstract class Piece
     {
         public enum SpaceOccupied
@@ -25,6 +25,8 @@ namespace ChessBackend
         public Team unit_team { get; set; }
         public bool has_moved { get; set; }
         public Cell unit_position { get; set; }
+        public bool board_a { get; set; }
+        public bool alive { get; set; }
         public string id
         {
             get
@@ -37,6 +39,8 @@ namespace ChessBackend
 
         public void init(Team team, Cell cell, Board _board)
         {
+            alive = true;
+            board_a = true;
             has_moved = false;
             board = _board;
             unit_team = team;
@@ -46,6 +50,16 @@ namespace ChessBackend
 
         public virtual bool validMove(Cell new_cell, ref string feedback)
         {
+            //check alternate cell is blocked
+            Piece unit = new_cell.unit;
+            if (unit != null)
+            {
+                if(unit.board_a != board_a)
+                {
+                    feedback = "That space is occupied in the other dimension";
+                    return false;
+                }
+            }
             //check teammate in cell
             if (checkSpaceBlocked(new_cell) == SpaceOccupied.Ally)
             {
@@ -76,16 +90,15 @@ namespace ChessBackend
 
         public void move(Cell new_cell, ref string feedback)
         {
+            if(new_cell.unit != null)
+            {
+                new_cell.unit.alive = false;
+            }
             unit_position.unit = null;
             unit_position = new_cell;
             new_cell.unit = this;
             has_moved = true;
-
-            Team check = board.checkCheck();
-            if (check != Team.None)
-            {
-                feedback = check + " is in check";
-            }
+            board_a = !board_a;
         }
     }
 }

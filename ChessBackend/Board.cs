@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using ChessBackend.Pieces;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 //TODO: Implement the check check function
 //TODO: Check check after each turn
@@ -105,50 +107,87 @@ namespace ChessBackend
                     x += x_dir, y += y_dir)
                 {
                     if (getCell(x, y).unit != null)
-                        return true;
+                    {
+                        if (getCell(x, y).unit.board_a == from.unit.board_a)
+                            return true;
+                    }
                 }
             }
             else
             {
-                for (; y != to.y_location; 
+                for (; y != to.y_location;
                     x += x_dir, y += y_dir)
                 {
                     if (getCell(x, y).unit != null)
-                        return true;
+                        if (getCell(x, y).unit.board_a == from.unit.board_a)
+                            return true;
                 }
             }
             return false;
         }
 
-        public Team checkCheck()
+        public void checkFeedback(Team active_player, ref string feedback)
         {
-            Team return_value = Team.None;
-            foreach(Piece piece in all_pieces)
+            if(inCheck(active_player) != null)
             {
-                if(piece.unit_team == Team.White)
+                if(hasValidMoves(active_player))
                 {
-                    string n = "";
-                    if(piece.validMove(black_king.unit_position, ref n))
-                    {
-                        if (return_value == Team.None)
-                            return_value = Team.Black;
-                        else if (return_value == Team.White)
-                            return_value = Team.Both;
-                    }
+                    feedback = inCheck(active_player).id + " has you in check.";
                 }
-                if(piece.unit_team == Team.Black)
+                else
                 {
-                    string n = "";
-                    if(piece.validMove(white_king.unit_position, ref n))
+                    feedback = "Game over. " + (Team)(3 - active_player) + " wins!";
+                }
+            }
+            else if(!hasValidMoves(active_player))
+            {
+                feedback = "The game has ended in a stalemate.";
+            }
+        }
+
+        public Piece inCheck(Team team)
+        {
+            Piece my_king = team == Team.Black ? black_king : white_king;
+            foreach (Piece piece in all_pieces)
+            {
+                if (piece.alive)
+                {
+                    if (piece.unit_team != team)
                     {
-                        if (return_value == Team.None)
-                            return_value = Team.White;
-                        else if (return_value == Team.Black)
-                            return_value = Team.Both;
+                        string n = "";
+                        if (piece.validMove(my_king.unit_position, ref n))
+                        {
+                            return piece;
+                        }
                     }
                 }
             }
-            return return_value;
+            return null;
+        }
+
+        public bool hasValidMoves(Team team)
+        {
+            for (int i = 0; i < all_pieces.Length; i++)
+            {
+                Piece piece = all_pieces[i];
+                if (piece.unit_team == team)
+                {
+                    foreach (Cell cell in cells)
+                    {
+                        string s = "";
+                        if (piece.validMove(cell, ref s))
+                        {
+                            Board deepcopyBoard = clone();
+                            deepcopyBoard.all_pieces[i].move(cell, ref s);
+                            if (deepcopyBoard.inCheck(team) == null)
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+            return false;
         }
     }
 }

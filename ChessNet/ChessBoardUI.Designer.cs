@@ -93,6 +93,70 @@
             this.x1y4 = new System.Windows.Forms.Button();
             this.x0y4 = new System.Windows.Forms.Button();
             this.Feedback = new System.Windows.Forms.Label();
+            this.x0y0B = new System.Windows.Forms.Button();
+            this.x1y0B = new System.Windows.Forms.Button();
+            this.x0y1B = new System.Windows.Forms.Button();
+            this.x1y1B = new System.Windows.Forms.Button();
+            this.x2y0B = new System.Windows.Forms.Button();
+            this.x3y0B = new System.Windows.Forms.Button();
+            this.x2y1B = new System.Windows.Forms.Button();
+            this.x3y1B = new System.Windows.Forms.Button();
+            this.x4y0B = new System.Windows.Forms.Button();
+            this.x5y0B = new System.Windows.Forms.Button();
+            this.x4y1B = new System.Windows.Forms.Button();
+            this.x5y1B = new System.Windows.Forms.Button();
+            this.x6y0B = new System.Windows.Forms.Button();
+            this.x7y0B = new System.Windows.Forms.Button();
+            this.x6y1B = new System.Windows.Forms.Button();
+            this.x7y1B = new System.Windows.Forms.Button();
+            this.x0y2B = new System.Windows.Forms.Button();
+            this.x1y2B = new System.Windows.Forms.Button();
+            this.x0y3B = new System.Windows.Forms.Button();
+            this.x1y3B = new System.Windows.Forms.Button();
+            this.x2y2B = new System.Windows.Forms.Button();
+            this.x3y2B = new System.Windows.Forms.Button();
+            this.x2y3B = new System.Windows.Forms.Button();
+            this.x3y3B = new System.Windows.Forms.Button();
+            this.x4y2B = new System.Windows.Forms.Button();
+            this.x5y2B = new System.Windows.Forms.Button();
+            this.x4y3B = new System.Windows.Forms.Button();
+            this.x5y3B = new System.Windows.Forms.Button();
+            this.x6y2B = new System.Windows.Forms.Button();
+            this.x7y2B = new System.Windows.Forms.Button();
+            this.x6y3B = new System.Windows.Forms.Button();
+            this.x7y3B = new System.Windows.Forms.Button();
+            this.x0y4B = new System.Windows.Forms.Button();
+            this.x1y4B = new System.Windows.Forms.Button();
+            this.x0y5B = new System.Windows.Forms.Button();
+            this.x1y5B = new System.Windows.Forms.Button();
+            this.x2y4B = new System.Windows.Forms.Button();
+            this.x3y4B = new System.Windows.Forms.Button();
+            this.x2y5B = new System.Windows.Forms.Button();
+            this.x3y5B = new System.Windows.Forms.Button();
+            this.x4y4B = new System.Windows.Forms.Button();
+            this.x5y4B = new System.Windows.Forms.Button();
+            this.x4y5B = new System.Windows.Forms.Button();
+            this.x5y5B = new System.Windows.Forms.Button();
+            this.x6y4B = new System.Windows.Forms.Button();
+            this.x7y4B = new System.Windows.Forms.Button();
+            this.x6y5B = new System.Windows.Forms.Button();
+            this.x7y5B = new System.Windows.Forms.Button();
+            this.x0y6B = new System.Windows.Forms.Button();
+            this.x1y6B = new System.Windows.Forms.Button();
+            this.x0y7B = new System.Windows.Forms.Button();
+            this.x1y7B = new System.Windows.Forms.Button();
+            this.x2y6B = new System.Windows.Forms.Button();
+            this.x3y6B = new System.Windows.Forms.Button();
+            this.x2y7B = new System.Windows.Forms.Button();
+            this.x3y7B = new System.Windows.Forms.Button();
+            this.x4y6B = new System.Windows.Forms.Button();
+            this.x5y6B = new System.Windows.Forms.Button();
+            this.x4y7B = new System.Windows.Forms.Button();
+            this.x5y7B = new System.Windows.Forms.Button();
+            this.x6y6B = new System.Windows.Forms.Button();
+            this.x7y6B = new System.Windows.Forms.Button();
+            this.x6y7B = new System.Windows.Forms.Button();
+            this.x7y7B = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // x0y0
@@ -748,11 +812,715 @@
             this.Feedback.Text = "I am the player feedback box";
             this.Feedback.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // x0y0B
+            // 
+            this.x0y0B.Location = new System.Drawing.Point(446, 347);
+            this.x0y0B.Name = "x0y0B";
+            this.x0y0B.Size = new System.Drawing.Size(45, 45);
+            this.x0y0B.TabIndex = 65;
+            this.x0y0B.UseVisualStyleBackColor = true;
+            this.x0y0B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x1y0B
+            // 
+            this.x1y0B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x1y0B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x1y0B.Location = new System.Drawing.Point(487, 347);
+            this.x1y0B.Name = "x1y0B";
+            this.x1y0B.Size = new System.Drawing.Size(45, 45);
+            this.x1y0B.TabIndex = 66;
+            this.x1y0B.UseVisualStyleBackColor = false;
+            this.x1y0B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x0y1B
+            // 
+            this.x0y1B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x0y1B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x0y1B.Location = new System.Drawing.Point(446, 306);
+            this.x0y1B.Name = "x0y1B";
+            this.x0y1B.Size = new System.Drawing.Size(45, 45);
+            this.x0y1B.TabIndex = 67;
+            this.x0y1B.UseVisualStyleBackColor = false;
+            this.x0y1B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x1y1B
+            // 
+            this.x1y1B.Location = new System.Drawing.Point(487, 306);
+            this.x1y1B.Name = "x1y1B";
+            this.x1y1B.Size = new System.Drawing.Size(45, 45);
+            this.x1y1B.TabIndex = 68;
+            this.x1y1B.UseVisualStyleBackColor = true;
+            this.x1y1B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x2y0B
+            // 
+            this.x2y0B.Location = new System.Drawing.Point(528, 347);
+            this.x2y0B.Name = "x2y0B";
+            this.x2y0B.Size = new System.Drawing.Size(45, 45);
+            this.x2y0B.TabIndex = 69;
+            this.x2y0B.UseVisualStyleBackColor = true;
+            this.x2y0B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x3y0B
+            // 
+            this.x3y0B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x3y0B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x3y0B.Location = new System.Drawing.Point(569, 347);
+            this.x3y0B.Name = "x3y0B";
+            this.x3y0B.Size = new System.Drawing.Size(45, 45);
+            this.x3y0B.TabIndex = 70;
+            this.x3y0B.UseVisualStyleBackColor = false;
+            this.x3y0B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x2y1B
+            // 
+            this.x2y1B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x2y1B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x2y1B.Location = new System.Drawing.Point(528, 306);
+            this.x2y1B.Name = "x2y1B";
+            this.x2y1B.Size = new System.Drawing.Size(45, 45);
+            this.x2y1B.TabIndex = 71;
+            this.x2y1B.UseVisualStyleBackColor = false;
+            this.x2y1B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x3y1B
+            // 
+            this.x3y1B.Location = new System.Drawing.Point(569, 306);
+            this.x3y1B.Name = "x3y1B";
+            this.x3y1B.Size = new System.Drawing.Size(45, 45);
+            this.x3y1B.TabIndex = 72;
+            this.x3y1B.UseVisualStyleBackColor = true;
+            this.x3y1B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x4y0B
+            // 
+            this.x4y0B.Location = new System.Drawing.Point(610, 347);
+            this.x4y0B.Name = "x4y0B";
+            this.x4y0B.Size = new System.Drawing.Size(45, 45);
+            this.x4y0B.TabIndex = 73;
+            this.x4y0B.UseVisualStyleBackColor = true;
+            this.x4y0B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x5y0B
+            // 
+            this.x5y0B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x5y0B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x5y0B.Location = new System.Drawing.Point(651, 347);
+            this.x5y0B.Name = "x5y0B";
+            this.x5y0B.Size = new System.Drawing.Size(45, 45);
+            this.x5y0B.TabIndex = 74;
+            this.x5y0B.UseVisualStyleBackColor = false;
+            this.x5y0B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x4y1B
+            // 
+            this.x4y1B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x4y1B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x4y1B.Location = new System.Drawing.Point(610, 306);
+            this.x4y1B.Name = "x4y1B";
+            this.x4y1B.Size = new System.Drawing.Size(45, 45);
+            this.x4y1B.TabIndex = 75;
+            this.x4y1B.UseVisualStyleBackColor = false;
+            this.x4y1B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x5y1B
+            // 
+            this.x5y1B.Location = new System.Drawing.Point(651, 306);
+            this.x5y1B.Name = "x5y1B";
+            this.x5y1B.Size = new System.Drawing.Size(45, 45);
+            this.x5y1B.TabIndex = 76;
+            this.x5y1B.UseVisualStyleBackColor = true;
+            this.x5y1B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x6y0B
+            // 
+            this.x6y0B.Location = new System.Drawing.Point(692, 347);
+            this.x6y0B.Name = "x6y0B";
+            this.x6y0B.Size = new System.Drawing.Size(45, 45);
+            this.x6y0B.TabIndex = 77;
+            this.x6y0B.UseVisualStyleBackColor = true;
+            this.x6y0B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x7y0B
+            // 
+            this.x7y0B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x7y0B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x7y0B.Location = new System.Drawing.Point(733, 347);
+            this.x7y0B.Name = "x7y0B";
+            this.x7y0B.Size = new System.Drawing.Size(45, 45);
+            this.x7y0B.TabIndex = 78;
+            this.x7y0B.UseVisualStyleBackColor = false;
+            this.x7y0B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x6y1B
+            // 
+            this.x6y1B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x6y1B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x6y1B.Location = new System.Drawing.Point(692, 306);
+            this.x6y1B.Name = "x6y1B";
+            this.x6y1B.Size = new System.Drawing.Size(45, 45);
+            this.x6y1B.TabIndex = 79;
+            this.x6y1B.UseVisualStyleBackColor = false;
+            this.x6y1B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x7y1B
+            // 
+            this.x7y1B.Location = new System.Drawing.Point(733, 306);
+            this.x7y1B.Name = "x7y1B";
+            this.x7y1B.Size = new System.Drawing.Size(45, 45);
+            this.x7y1B.TabIndex = 80;
+            this.x7y1B.UseVisualStyleBackColor = true;
+            this.x7y1B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x0y2B
+            // 
+            this.x0y2B.Location = new System.Drawing.Point(446, 265);
+            this.x0y2B.Name = "x0y2B";
+            this.x0y2B.Size = new System.Drawing.Size(45, 45);
+            this.x0y2B.TabIndex = 81;
+            this.x0y2B.UseVisualStyleBackColor = true;
+            this.x0y2B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x1y2B
+            // 
+            this.x1y2B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x1y2B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x1y2B.Location = new System.Drawing.Point(487, 265);
+            this.x1y2B.Name = "x1y2B";
+            this.x1y2B.Size = new System.Drawing.Size(45, 45);
+            this.x1y2B.TabIndex = 82;
+            this.x1y2B.UseVisualStyleBackColor = false;
+            this.x1y2B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x0y3B
+            // 
+            this.x0y3B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x0y3B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x0y3B.Location = new System.Drawing.Point(446, 224);
+            this.x0y3B.Name = "x0y3B";
+            this.x0y3B.Size = new System.Drawing.Size(45, 45);
+            this.x0y3B.TabIndex = 83;
+            this.x0y3B.UseVisualStyleBackColor = false;
+            this.x0y3B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x1y3B
+            // 
+            this.x1y3B.Location = new System.Drawing.Point(487, 224);
+            this.x1y3B.Name = "x1y3B";
+            this.x1y3B.Size = new System.Drawing.Size(45, 45);
+            this.x1y3B.TabIndex = 84;
+            this.x1y3B.UseVisualStyleBackColor = true;
+            this.x1y3B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x2y2B
+            // 
+            this.x2y2B.Location = new System.Drawing.Point(528, 265);
+            this.x2y2B.Name = "x2y2B";
+            this.x2y2B.Size = new System.Drawing.Size(45, 45);
+            this.x2y2B.TabIndex = 85;
+            this.x2y2B.UseVisualStyleBackColor = true;
+            this.x2y2B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x3y2B
+            // 
+            this.x3y2B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x3y2B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x3y2B.Location = new System.Drawing.Point(569, 265);
+            this.x3y2B.Name = "x3y2B";
+            this.x3y2B.Size = new System.Drawing.Size(45, 45);
+            this.x3y2B.TabIndex = 86;
+            this.x3y2B.UseVisualStyleBackColor = false;
+            this.x3y2B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x2y3B
+            // 
+            this.x2y3B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x2y3B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x2y3B.Location = new System.Drawing.Point(528, 224);
+            this.x2y3B.Name = "x2y3B";
+            this.x2y3B.Size = new System.Drawing.Size(45, 45);
+            this.x2y3B.TabIndex = 87;
+            this.x2y3B.UseVisualStyleBackColor = false;
+            this.x2y3B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x3y3B
+            // 
+            this.x3y3B.Location = new System.Drawing.Point(569, 224);
+            this.x3y3B.Name = "x3y3B";
+            this.x3y3B.Size = new System.Drawing.Size(45, 45);
+            this.x3y3B.TabIndex = 88;
+            this.x3y3B.UseVisualStyleBackColor = true;
+            this.x3y3B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x4y2B
+            // 
+            this.x4y2B.Location = new System.Drawing.Point(610, 265);
+            this.x4y2B.Name = "x4y2B";
+            this.x4y2B.Size = new System.Drawing.Size(45, 45);
+            this.x4y2B.TabIndex = 89;
+            this.x4y2B.UseVisualStyleBackColor = true;
+            this.x4y2B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x5y2B
+            // 
+            this.x5y2B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x5y2B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x5y2B.Location = new System.Drawing.Point(651, 265);
+            this.x5y2B.Name = "x5y2B";
+            this.x5y2B.Size = new System.Drawing.Size(45, 45);
+            this.x5y2B.TabIndex = 90;
+            this.x5y2B.UseVisualStyleBackColor = false;
+            this.x5y2B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x4y3B
+            // 
+            this.x4y3B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x4y3B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x4y3B.Location = new System.Drawing.Point(610, 224);
+            this.x4y3B.Name = "x4y3B";
+            this.x4y3B.Size = new System.Drawing.Size(45, 45);
+            this.x4y3B.TabIndex = 91;
+            this.x4y3B.UseVisualStyleBackColor = false;
+            this.x4y3B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x5y3B
+            // 
+            this.x5y3B.Location = new System.Drawing.Point(651, 224);
+            this.x5y3B.Name = "x5y3B";
+            this.x5y3B.Size = new System.Drawing.Size(45, 45);
+            this.x5y3B.TabIndex = 92;
+            this.x5y3B.UseVisualStyleBackColor = true;
+            this.x5y3B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x6y2B
+            // 
+            this.x6y2B.Location = new System.Drawing.Point(692, 265);
+            this.x6y2B.Name = "x6y2B";
+            this.x6y2B.Size = new System.Drawing.Size(45, 45);
+            this.x6y2B.TabIndex = 93;
+            this.x6y2B.UseVisualStyleBackColor = true;
+            this.x6y2B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x7y2B
+            // 
+            this.x7y2B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x7y2B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x7y2B.Location = new System.Drawing.Point(733, 265);
+            this.x7y2B.Name = "x7y2B";
+            this.x7y2B.Size = new System.Drawing.Size(45, 45);
+            this.x7y2B.TabIndex = 94;
+            this.x7y2B.UseVisualStyleBackColor = false;
+            this.x7y2B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x6y3B
+            // 
+            this.x6y3B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x6y3B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x6y3B.Location = new System.Drawing.Point(692, 224);
+            this.x6y3B.Name = "x6y3B";
+            this.x6y3B.Size = new System.Drawing.Size(45, 45);
+            this.x6y3B.TabIndex = 95;
+            this.x6y3B.UseVisualStyleBackColor = false;
+            this.x6y3B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x7y3B
+            // 
+            this.x7y3B.Location = new System.Drawing.Point(733, 224);
+            this.x7y3B.Name = "x7y3B";
+            this.x7y3B.Size = new System.Drawing.Size(45, 45);
+            this.x7y3B.TabIndex = 96;
+            this.x7y3B.UseVisualStyleBackColor = true;
+            this.x7y3B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x0y4B
+            // 
+            this.x0y4B.Location = new System.Drawing.Point(446, 183);
+            this.x0y4B.Name = "x0y4B";
+            this.x0y4B.Size = new System.Drawing.Size(45, 45);
+            this.x0y4B.TabIndex = 97;
+            this.x0y4B.UseVisualStyleBackColor = true;
+            this.x0y4B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x1y4B
+            // 
+            this.x1y4B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x1y4B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x1y4B.Location = new System.Drawing.Point(487, 183);
+            this.x1y4B.Name = "x1y4B";
+            this.x1y4B.Size = new System.Drawing.Size(45, 45);
+            this.x1y4B.TabIndex = 98;
+            this.x1y4B.UseVisualStyleBackColor = false;
+            this.x1y4B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x0y5B
+            // 
+            this.x0y5B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x0y5B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x0y5B.Location = new System.Drawing.Point(446, 142);
+            this.x0y5B.Name = "x0y5B";
+            this.x0y5B.Size = new System.Drawing.Size(45, 45);
+            this.x0y5B.TabIndex = 99;
+            this.x0y5B.UseVisualStyleBackColor = false;
+            this.x0y5B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x1y5B
+            // 
+            this.x1y5B.Location = new System.Drawing.Point(487, 142);
+            this.x1y5B.Name = "x1y5B";
+            this.x1y5B.Size = new System.Drawing.Size(45, 45);
+            this.x1y5B.TabIndex = 100;
+            this.x1y5B.UseVisualStyleBackColor = true;
+            this.x1y5B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x2y4B
+            // 
+            this.x2y4B.Location = new System.Drawing.Point(528, 183);
+            this.x2y4B.Name = "x2y4B";
+            this.x2y4B.Size = new System.Drawing.Size(45, 45);
+            this.x2y4B.TabIndex = 101;
+            this.x2y4B.UseVisualStyleBackColor = true;
+            this.x2y4B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x3y4B
+            // 
+            this.x3y4B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x3y4B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x3y4B.Location = new System.Drawing.Point(569, 183);
+            this.x3y4B.Name = "x3y4B";
+            this.x3y4B.Size = new System.Drawing.Size(45, 45);
+            this.x3y4B.TabIndex = 102;
+            this.x3y4B.UseVisualStyleBackColor = false;
+            this.x3y4B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x2y5B
+            // 
+            this.x2y5B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x2y5B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x2y5B.Location = new System.Drawing.Point(528, 142);
+            this.x2y5B.Name = "x2y5B";
+            this.x2y5B.Size = new System.Drawing.Size(45, 45);
+            this.x2y5B.TabIndex = 103;
+            this.x2y5B.UseVisualStyleBackColor = false;
+            this.x2y5B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x3y5B
+            // 
+            this.x3y5B.Location = new System.Drawing.Point(569, 142);
+            this.x3y5B.Name = "x3y5B";
+            this.x3y5B.Size = new System.Drawing.Size(45, 45);
+            this.x3y5B.TabIndex = 104;
+            this.x3y5B.UseVisualStyleBackColor = true;
+            this.x3y5B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x4y4B
+            // 
+            this.x4y4B.Location = new System.Drawing.Point(610, 183);
+            this.x4y4B.Name = "x4y4B";
+            this.x4y4B.Size = new System.Drawing.Size(45, 45);
+            this.x4y4B.TabIndex = 105;
+            this.x4y4B.UseVisualStyleBackColor = true;
+            this.x4y4B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x5y4B
+            // 
+            this.x5y4B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x5y4B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x5y4B.Location = new System.Drawing.Point(651, 183);
+            this.x5y4B.Name = "x5y4B";
+            this.x5y4B.Size = new System.Drawing.Size(45, 45);
+            this.x5y4B.TabIndex = 106;
+            this.x5y4B.UseVisualStyleBackColor = false;
+            this.x5y4B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x4y5B
+            // 
+            this.x4y5B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x4y5B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x4y5B.Location = new System.Drawing.Point(610, 142);
+            this.x4y5B.Name = "x4y5B";
+            this.x4y5B.Size = new System.Drawing.Size(45, 45);
+            this.x4y5B.TabIndex = 107;
+            this.x4y5B.UseVisualStyleBackColor = false;
+            this.x4y5B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x5y5B
+            // 
+            this.x5y5B.Location = new System.Drawing.Point(651, 142);
+            this.x5y5B.Name = "x5y5B";
+            this.x5y5B.Size = new System.Drawing.Size(45, 45);
+            this.x5y5B.TabIndex = 108;
+            this.x5y5B.UseVisualStyleBackColor = true;
+            this.x5y5B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x6y4B
+            // 
+            this.x6y4B.Location = new System.Drawing.Point(692, 183);
+            this.x6y4B.Name = "x6y4B";
+            this.x6y4B.Size = new System.Drawing.Size(45, 45);
+            this.x6y4B.TabIndex = 109;
+            this.x6y4B.UseVisualStyleBackColor = true;
+            this.x6y4B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x7y4B
+            // 
+            this.x7y4B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x7y4B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x7y4B.Location = new System.Drawing.Point(733, 183);
+            this.x7y4B.Name = "x7y4B";
+            this.x7y4B.Size = new System.Drawing.Size(45, 45);
+            this.x7y4B.TabIndex = 110;
+            this.x7y4B.UseVisualStyleBackColor = false;
+            this.x7y4B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x6y5B
+            // 
+            this.x6y5B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x6y5B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x6y5B.Location = new System.Drawing.Point(692, 142);
+            this.x6y5B.Name = "x6y5B";
+            this.x6y5B.Size = new System.Drawing.Size(45, 45);
+            this.x6y5B.TabIndex = 111;
+            this.x6y5B.UseVisualStyleBackColor = false;
+            this.x6y5B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x7y5B
+            // 
+            this.x7y5B.Location = new System.Drawing.Point(733, 142);
+            this.x7y5B.Name = "x7y5B";
+            this.x7y5B.Size = new System.Drawing.Size(45, 45);
+            this.x7y5B.TabIndex = 112;
+            this.x7y5B.UseVisualStyleBackColor = true;
+            this.x7y5B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x0y6B
+            // 
+            this.x0y6B.Location = new System.Drawing.Point(446, 101);
+            this.x0y6B.Name = "x0y6B";
+            this.x0y6B.Size = new System.Drawing.Size(45, 45);
+            this.x0y6B.TabIndex = 113;
+            this.x0y6B.UseVisualStyleBackColor = true;
+            this.x0y6B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x1y6B
+            // 
+            this.x1y6B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x1y6B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x1y6B.Location = new System.Drawing.Point(487, 101);
+            this.x1y6B.Name = "x1y6B";
+            this.x1y6B.Size = new System.Drawing.Size(45, 45);
+            this.x1y6B.TabIndex = 114;
+            this.x1y6B.UseVisualStyleBackColor = false;
+            this.x1y6B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x0y7B
+            // 
+            this.x0y7B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x0y7B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x0y7B.Location = new System.Drawing.Point(446, 60);
+            this.x0y7B.Name = "x0y7B";
+            this.x0y7B.Size = new System.Drawing.Size(45, 45);
+            this.x0y7B.TabIndex = 115;
+            this.x0y7B.UseVisualStyleBackColor = false;
+            this.x0y7B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x1y7B
+            // 
+            this.x1y7B.Location = new System.Drawing.Point(487, 60);
+            this.x1y7B.Name = "x1y7B";
+            this.x1y7B.Size = new System.Drawing.Size(45, 45);
+            this.x1y7B.TabIndex = 116;
+            this.x1y7B.UseVisualStyleBackColor = true;
+            this.x1y7B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x2y6B
+            // 
+            this.x2y6B.Location = new System.Drawing.Point(528, 101);
+            this.x2y6B.Name = "x2y6B";
+            this.x2y6B.Size = new System.Drawing.Size(45, 45);
+            this.x2y6B.TabIndex = 117;
+            this.x2y6B.UseVisualStyleBackColor = true;
+            this.x2y6B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x3y6B
+            // 
+            this.x3y6B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x3y6B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x3y6B.Location = new System.Drawing.Point(569, 101);
+            this.x3y6B.Name = "x3y6B";
+            this.x3y6B.Size = new System.Drawing.Size(45, 45);
+            this.x3y6B.TabIndex = 118;
+            this.x3y6B.UseVisualStyleBackColor = false;
+            this.x3y6B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x2y7B
+            // 
+            this.x2y7B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x2y7B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x2y7B.Location = new System.Drawing.Point(528, 60);
+            this.x2y7B.Name = "x2y7B";
+            this.x2y7B.Size = new System.Drawing.Size(45, 45);
+            this.x2y7B.TabIndex = 119;
+            this.x2y7B.UseVisualStyleBackColor = false;
+            this.x2y7B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x3y7B
+            // 
+            this.x3y7B.Location = new System.Drawing.Point(569, 60);
+            this.x3y7B.Name = "x3y7B";
+            this.x3y7B.Size = new System.Drawing.Size(45, 45);
+            this.x3y7B.TabIndex = 120;
+            this.x3y7B.UseVisualStyleBackColor = true;
+            this.x3y7B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x4y6B
+            // 
+            this.x4y6B.Location = new System.Drawing.Point(610, 101);
+            this.x4y6B.Name = "x4y6B";
+            this.x4y6B.Size = new System.Drawing.Size(45, 45);
+            this.x4y6B.TabIndex = 121;
+            this.x4y6B.UseVisualStyleBackColor = true;
+            this.x4y6B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x5y6B
+            // 
+            this.x5y6B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x5y6B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x5y6B.Location = new System.Drawing.Point(651, 101);
+            this.x5y6B.Name = "x5y6B";
+            this.x5y6B.Size = new System.Drawing.Size(45, 45);
+            this.x5y6B.TabIndex = 122;
+            this.x5y6B.UseVisualStyleBackColor = false;
+            this.x5y6B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x4y7B
+            // 
+            this.x4y7B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x4y7B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x4y7B.Location = new System.Drawing.Point(610, 60);
+            this.x4y7B.Name = "x4y7B";
+            this.x4y7B.Size = new System.Drawing.Size(45, 45);
+            this.x4y7B.TabIndex = 123;
+            this.x4y7B.UseVisualStyleBackColor = false;
+            this.x4y7B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x5y7B
+            // 
+            this.x5y7B.Location = new System.Drawing.Point(651, 60);
+            this.x5y7B.Name = "x5y7B";
+            this.x5y7B.Size = new System.Drawing.Size(45, 45);
+            this.x5y7B.TabIndex = 124;
+            this.x5y7B.UseVisualStyleBackColor = true;
+            this.x5y7B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x6y6B
+            // 
+            this.x6y6B.Location = new System.Drawing.Point(692, 101);
+            this.x6y6B.Name = "x6y6B";
+            this.x6y6B.Size = new System.Drawing.Size(45, 45);
+            this.x6y6B.TabIndex = 125;
+            this.x6y6B.UseVisualStyleBackColor = true;
+            this.x6y6B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x7y6B
+            // 
+            this.x7y6B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x7y6B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x7y6B.Location = new System.Drawing.Point(733, 101);
+            this.x7y6B.Name = "x7y6B";
+            this.x7y6B.Size = new System.Drawing.Size(45, 45);
+            this.x7y6B.TabIndex = 126;
+            this.x7y6B.UseVisualStyleBackColor = false;
+            this.x7y6B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x6y7B
+            // 
+            this.x6y7B.BackColor = System.Drawing.SystemColors.InfoText;
+            this.x6y7B.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.x6y7B.Location = new System.Drawing.Point(692, 60);
+            this.x6y7B.Name = "x6y7B";
+            this.x6y7B.Size = new System.Drawing.Size(45, 45);
+            this.x6y7B.TabIndex = 127;
+            this.x6y7B.UseVisualStyleBackColor = false;
+            this.x6y7B.Click += new System.EventHandler(this.handleClick);
+            // 
+            // x7y7B
+            // 
+            this.x7y7B.Location = new System.Drawing.Point(733, 60);
+            this.x7y7B.Name = "x7y7B";
+            this.x7y7B.Size = new System.Drawing.Size(45, 45);
+            this.x7y7B.TabIndex = 128;
+            this.x7y7B.UseVisualStyleBackColor = true;
+            this.x7y7B.Click += new System.EventHandler(this.handleClick);
+            // 
             // ChessBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 450);
+            this.ClientSize = new System.Drawing.Size(1043, 450);
+            this.Controls.Add(this.x7y7B);
+            this.Controls.Add(this.x6y7B);
+            this.Controls.Add(this.x7y6B);
+            this.Controls.Add(this.x6y6B);
+            this.Controls.Add(this.x5y7B);
+            this.Controls.Add(this.x4y7B);
+            this.Controls.Add(this.x5y6B);
+            this.Controls.Add(this.x4y6B);
+            this.Controls.Add(this.x3y7B);
+            this.Controls.Add(this.x2y7B);
+            this.Controls.Add(this.x3y6B);
+            this.Controls.Add(this.x2y6B);
+            this.Controls.Add(this.x1y7B);
+            this.Controls.Add(this.x0y7B);
+            this.Controls.Add(this.x1y6B);
+            this.Controls.Add(this.x0y6B);
+            this.Controls.Add(this.x7y5B);
+            this.Controls.Add(this.x6y5B);
+            this.Controls.Add(this.x7y4B);
+            this.Controls.Add(this.x6y4B);
+            this.Controls.Add(this.x5y5B);
+            this.Controls.Add(this.x4y5B);
+            this.Controls.Add(this.x5y4B);
+            this.Controls.Add(this.x4y4B);
+            this.Controls.Add(this.x3y5B);
+            this.Controls.Add(this.x2y5B);
+            this.Controls.Add(this.x3y4B);
+            this.Controls.Add(this.x2y4B);
+            this.Controls.Add(this.x1y5B);
+            this.Controls.Add(this.x0y5B);
+            this.Controls.Add(this.x1y4B);
+            this.Controls.Add(this.x0y4B);
+            this.Controls.Add(this.x7y3B);
+            this.Controls.Add(this.x6y3B);
+            this.Controls.Add(this.x7y2B);
+            this.Controls.Add(this.x6y2B);
+            this.Controls.Add(this.x5y3B);
+            this.Controls.Add(this.x4y3B);
+            this.Controls.Add(this.x5y2B);
+            this.Controls.Add(this.x4y2B);
+            this.Controls.Add(this.x3y3B);
+            this.Controls.Add(this.x2y3B);
+            this.Controls.Add(this.x3y2B);
+            this.Controls.Add(this.x2y2B);
+            this.Controls.Add(this.x1y3B);
+            this.Controls.Add(this.x0y3B);
+            this.Controls.Add(this.x1y2B);
+            this.Controls.Add(this.x0y2B);
+            this.Controls.Add(this.x7y1B);
+            this.Controls.Add(this.x6y1B);
+            this.Controls.Add(this.x7y0B);
+            this.Controls.Add(this.x6y0B);
+            this.Controls.Add(this.x5y1B);
+            this.Controls.Add(this.x4y1B);
+            this.Controls.Add(this.x5y0B);
+            this.Controls.Add(this.x4y0B);
+            this.Controls.Add(this.x3y1B);
+            this.Controls.Add(this.x2y1B);
+            this.Controls.Add(this.x3y0B);
+            this.Controls.Add(this.x2y0B);
+            this.Controls.Add(this.x1y1B);
+            this.Controls.Add(this.x0y1B);
+            this.Controls.Add(this.x1y0B);
+            this.Controls.Add(this.x0y0B);
             this.Controls.Add(this.Feedback);
             this.Controls.Add(this.x7y7);
             this.Controls.Add(this.x6y7);
@@ -892,6 +1660,70 @@
         private System.Windows.Forms.Button x1y4;
         private System.Windows.Forms.Button x0y4;
         private System.Windows.Forms.Label Feedback;
+        private System.Windows.Forms.Button x0y0B;
+        private System.Windows.Forms.Button x1y0B;
+        private System.Windows.Forms.Button x0y1B;
+        private System.Windows.Forms.Button x1y1B;
+        private System.Windows.Forms.Button x2y0B;
+        private System.Windows.Forms.Button x3y0B;
+        private System.Windows.Forms.Button x2y1B;
+        private System.Windows.Forms.Button x3y1B;
+        private System.Windows.Forms.Button x4y0B;
+        private System.Windows.Forms.Button x5y0B;
+        private System.Windows.Forms.Button x4y1B;
+        private System.Windows.Forms.Button x5y1B;
+        private System.Windows.Forms.Button x6y0B;
+        private System.Windows.Forms.Button x7y0B;
+        private System.Windows.Forms.Button x6y1B;
+        private System.Windows.Forms.Button x7y1B;
+        private System.Windows.Forms.Button x0y2B;
+        private System.Windows.Forms.Button x1y2B;
+        private System.Windows.Forms.Button x0y3B;
+        private System.Windows.Forms.Button x1y3B;
+        private System.Windows.Forms.Button x2y2B;
+        private System.Windows.Forms.Button x3y2B;
+        private System.Windows.Forms.Button x2y3B;
+        private System.Windows.Forms.Button x3y3B;
+        private System.Windows.Forms.Button x4y2B;
+        private System.Windows.Forms.Button x5y2B;
+        private System.Windows.Forms.Button x4y3B;
+        private System.Windows.Forms.Button x5y3B;
+        private System.Windows.Forms.Button x6y2B;
+        private System.Windows.Forms.Button x7y2B;
+        private System.Windows.Forms.Button x6y3B;
+        private System.Windows.Forms.Button x7y3B;
+        private System.Windows.Forms.Button x0y4B;
+        private System.Windows.Forms.Button x1y4B;
+        private System.Windows.Forms.Button x0y5B;
+        private System.Windows.Forms.Button x1y5B;
+        private System.Windows.Forms.Button x2y4B;
+        private System.Windows.Forms.Button x3y4B;
+        private System.Windows.Forms.Button x2y5B;
+        private System.Windows.Forms.Button x3y5B;
+        private System.Windows.Forms.Button x4y4B;
+        private System.Windows.Forms.Button x5y4B;
+        private System.Windows.Forms.Button x4y5B;
+        private System.Windows.Forms.Button x5y5B;
+        private System.Windows.Forms.Button x6y4B;
+        private System.Windows.Forms.Button x7y4B;
+        private System.Windows.Forms.Button x6y5B;
+        private System.Windows.Forms.Button x7y5B;
+        private System.Windows.Forms.Button x0y6B;
+        private System.Windows.Forms.Button x1y6B;
+        private System.Windows.Forms.Button x0y7B;
+        private System.Windows.Forms.Button x1y7B;
+        private System.Windows.Forms.Button x2y6B;
+        private System.Windows.Forms.Button x3y6B;
+        private System.Windows.Forms.Button x2y7B;
+        private System.Windows.Forms.Button x3y7B;
+        private System.Windows.Forms.Button x4y6B;
+        private System.Windows.Forms.Button x5y6B;
+        private System.Windows.Forms.Button x4y7B;
+        private System.Windows.Forms.Button x5y7B;
+        private System.Windows.Forms.Button x6y6B;
+        private System.Windows.Forms.Button x7y6B;
+        private System.Windows.Forms.Button x6y7B;
+        private System.Windows.Forms.Button x7y7B;
     }
 }
 
