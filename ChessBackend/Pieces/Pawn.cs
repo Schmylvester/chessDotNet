@@ -32,16 +32,17 @@ namespace ChessBackend.Pieces
             // you can move two
             if (!has_moved)
             {
-                if (unit_position.y_location + (direction * 2) == new_cell.y_location)
+                if (unit_position.y_location + (direction * 2) == new_cell.y_location
+                    && unit_position.x_location == new_cell.x_location && in_space == SpaceOccupied.Empty)
                 {
                     //check path blocked
-                    if (board.checkPathBlocked(unit_position, new_cell))
+                    Piece block = board.checkPathBlocked(unit_position, new_cell);
+                    if (block != null)
                     {
-                        feedback = "This would be valid if you were not trying to jump over another piece";
+                        feedback = "This would be valid if you were not trying to jump over the " + block.id;
                         return false;
                     }
-                    if (unit_position.x_location == new_cell.x_location && in_space == SpaceOccupied.Empty)
-                        return base.validMove(new_cell, ref feedback);
+                    return base.validMove(new_cell, ref feedback);
                 }
             }
             feedback = "Pawns have a bunch of movement rules, that move would break them";

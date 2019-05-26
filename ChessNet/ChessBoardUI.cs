@@ -38,11 +38,16 @@ namespace ChessNet
                         cells[0, x, y].Text = "";
                         cells[1, x, y].Text = "";
                     }
-                    else
+                    else if(unit.alive)
                     {
                         int b = unit.board_a ? 0 : 1;
                         cells[b, x, y].Text = unit.id;
                         cells[1 - b, x, y].Text = "";
+                    }
+                    else
+                    {
+                        cells[0, x, y].Text = "";
+                        cells[1, x, y].Text = "";
                     }
                 }
             }

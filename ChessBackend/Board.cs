@@ -5,9 +5,8 @@ using ChessBackend.Pieces;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
-//TODO: Implement the check check function
-//TODO: Check check after each turn
-//TODO: Check checkmate
+//TODO: Check check after each turn (maybe done)
+//TODO: Check checkmate (maybe done)
 //TODO: Check stalemate
 
 namespace ChessBackend
@@ -47,9 +46,9 @@ namespace ChessBackend
             all_pieces[26] = new Bishop();   //white bishop left
             all_pieces[29] = new Bishop();   //white bishop right
             all_pieces[3] = new Queen();    //black queen
-            all_pieces[28] = new Queen();    //white queen
+            all_pieces[27] = new Queen();    //white queen
             all_pieces[4] = new King();     //black king
-            all_pieces[27] = new King();     //white king
+            all_pieces[28] = new King();     //white king
             //all pawns
             for (int i = 8; i < 24; i++)
             {
@@ -65,7 +64,7 @@ namespace ChessBackend
                 all_pieces[i].init(Team.White, getCell(i % 8, 4 + (i / 8)), this);
             }
             //store kings to help identify when in check
-            white_king = (King)all_pieces[27];
+            white_king = (King)all_pieces[28];
             black_king = (King)all_pieces[4];
         }
 
@@ -84,7 +83,7 @@ namespace ChessBackend
             return cells[(y * width) + x];
         }
 
-        public bool checkPathBlocked(Cell from, Cell to)
+        public Piece checkPathBlocked(Cell from, Cell to)
         {
             //get path direction
             int x_dir = to.x_location - from.x_location;
@@ -97,40 +96,33 @@ namespace ChessBackend
                 y_dir = y_dir / Math.Abs(y_dir);
 
             //check every cell in the direction
-            int x = from.x_location + x_dir;
-            int y = from.y_location + y_dir;
+            int x = from.x_location;
+            int y = from.y_location;
             //loop through the direction until you reach the target
-            //wasn't working the normal way, so now here is an if statement
-            if (y_dir == 0)
+            Cell cell = null;
+            while (true)
             {
-                for (; x != to.x_location;
-                    x += x_dir, y += y_dir)
+                x += x_dir;
+                y += y_dir;
+                cell = getCell(x, y);
+                if (cell == to)
                 {
-                    if (getCell(x, y).unit != null)
-                    {
-                        if (getCell(x, y).unit.board_a == from.unit.board_a)
-                            return true;
-                    }
+                    break;
+                }
+                if (cell.unit != null)
+                {
+                    if(cell.unit.board_a == from.unit.board_a)
+                        return cell.unit;
                 }
             }
-            else
-            {
-                for (; y != to.y_location;
-                    x += x_dir, y += y_dir)
-                {
-                    if (getCell(x, y).unit != null)
-                        if (getCell(x, y).unit.board_a == from.unit.board_a)
-                            return true;
-                }
-            }
-            return false;
+            return null;
         }
 
         public void checkFeedback(Team active_player, ref string feedback)
         {
-            if(inCheck(active_player) != null)
+            if (inCheck(active_player) != null)
             {
-                if(hasValidMoves(active_player))
+                if (hasValidMoves(active_player))
                 {
                     feedback = inCheck(active_player).id + " has you in check.";
                 }
@@ -139,7 +131,7 @@ namespace ChessBackend
                     feedback = "Game over. " + (Team)(3 - active_player) + " wins!";
                 }
             }
-            else if(!hasValidMoves(active_player))
+            else if (!hasValidMoves(active_player))
             {
                 feedback = "The game has ended in a stalemate.";
             }
@@ -177,15 +169,25 @@ namespace ChessBackend
                         string s = "";
                         if (piece.validMove(cell, ref s))
                         {
-                            //make a copy of this board
-                            //move the piece to the place
-                            //are you out of check?
+                            Board copy = makeCopy();
+                            copy.all_pieces[i].move(copy.getCell(cell.x_location, cell.y_location), ref s);
+                            if (copy.inCheck(team) == null)
                                 return true;
                         }
                     }
                 }
             }
             return false;
+        }
+
+        public Board makeCopy()
+        {
+            Board copy = new Board();
+            for (int i = 0; i < 32; i++)
+            {
+                all_pieces[i].makeCopy(copy.all_pieces[i], copy);
+            }
+            return copy;
         }
     }
 }
