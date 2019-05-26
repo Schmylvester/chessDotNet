@@ -16,7 +16,7 @@ namespace ChessBackend
         int width = 8;
         int height = 8;
         Cell[] cells = null;
-        Piece[] all_pieces = null;
+        public Piece[] all_pieces = null;
         King white_king = null;
         King black_king = null;
 

@@ -97,7 +97,7 @@ namespace ChessBackend
             return SpaceOccupied.Empty;
         }
 
-        public void move(Cell new_cell, ref string feedback)
+        public virtual void move(Cell new_cell, ref string feedback)
         {
             if (new_cell.unit != null)
             {
@@ -120,6 +120,15 @@ namespace ChessBackend
             copy_to.unit_team = unit_team;
             if(copy_to.alive)
                 copy_to.unit_position.unit = copy_to;
+            var p = (copy_to as Pieces.Pawn);
+            if (p != null)
+            {
+                if(p.has_transformed != Transform.None)
+                {
+                    string s = "";
+                    p.transformPiece(p.has_transformed, copy_to.unit_position, ref s);
+                }
+            }
         }
     }
 }

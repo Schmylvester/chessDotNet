@@ -2,10 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 
+public enum Transform
+{
+    None,
+    Knight,
+    Queen,
+}
+
 namespace ChessBackend.Pieces
 {
     class Pawn : Piece
     {
+        public Transform has_transformed = Transform.None;
+
         public override string getName()
         {
             return "Pawn";
@@ -47,6 +56,40 @@ namespace ChessBackend.Pieces
             }
             feedback = "Pawns have a bunch of movement rules, that move would break them";
             return false;
+        }
+
+        public override void move(Cell new_cell, ref string feedback)
+        {
+            if(new_cell.y_location == 0 || new_cell.y_location == 7)
+            {
+                transformPiece(Transform.Queen, new_cell, ref feedback);
+                return;
+            }
+            base.move(new_cell, ref feedback);
+        }
+
+        public void transformPiece(Transform into, Cell new_cell, ref string feedback)
+        {
+            int my_idx = -1;
+            //find me on the board
+            for (int i = 0; i < 32; i++)
+            {
+                if (board.all_pieces[i] == this)
+                {
+                    my_idx = i;
+                    break;
+                }
+            }
+            //transform me
+            Piece me = null;
+            if (into == Transform.Queen)
+                me = new Queen();
+            else
+                me = new Knight();
+            makeCopy(me, board);
+            me.move(new_cell, ref feedback);
+            board.all_pieces[my_idx] = me;
+            has_transformed = into;
         }
     }
 }
